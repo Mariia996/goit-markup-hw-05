@@ -122,6 +122,7 @@ p {
 
 .site-nav-item {
   margin-right: 50px;
+  position: relative;
 }
 
 .site-nav-item:last-child {
@@ -139,11 +140,20 @@ p {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.link.current {
   color: var(--accent-color);
 }
 
-/* Contacts */
+.link.current::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
+/* ========= Contacts ========= */
 
 .site-contacts {
   font-weight: 500;
@@ -242,9 +252,13 @@ p {
   text-decoration: none;
 }
 
-.address-list-item .link {
+.address-list-item > .link {
   color: var(--secondary-white-color);
   text-decoration: none;
+}
+
+.address-list-item > .link:hover {
+  color: var(--accent-color);
 }
 
 .footer-container-social {
