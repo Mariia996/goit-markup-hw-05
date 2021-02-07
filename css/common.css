@@ -122,7 +122,7 @@ p {
 
 .site-nav-item {
   margin-right: 50px;
-  position: relative;
+  /* position: relative; */
 }
 
 .site-nav-item:last-child {
@@ -141,6 +141,8 @@ p {
 }
 
 .link.current {
+  position: relative;
+  display: inline-block;
   color: var(--accent-color);
 }
 
@@ -150,6 +152,9 @@ p {
   display: block;
   width: 48px;
   height: 4px;
+  bottom: 0;
+  left: 0;
+  /* transform: translate(0, -100%); */
   background-color: var(--accent-color);
 }
 
@@ -257,7 +262,8 @@ p {
   text-decoration: none;
 }
 
-.address-list-item > .link:hover {
+.address-list-item > .link:hover,
+.address-list-item > .link:focus {
   color: var(--accent-color);
 }
 
