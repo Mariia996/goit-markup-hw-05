@@ -519,4 +519,8 @@
   cursor: pointer;
 }
 
+.close-modal-button:hover .close-button-icon {
+  fill: var(--accent-color);
+}
+
 /* ======== END MODAL WINDOW ======== */
