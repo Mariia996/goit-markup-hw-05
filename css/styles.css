@@ -279,6 +279,7 @@
 
 .social-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -332,6 +333,7 @@
 
 .client-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ======== END OUR CLIENTS ======== */
 
@@ -432,7 +434,6 @@
   color: var(--primary-white-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  opacity: 0;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -451,9 +452,9 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
 
-.link-card:hover .example-content-description {
+.link-card:hover .example-content-description,
+.link-card:focus .example-content-description {
   transform: translateY(0);
-  opacity: 1;
 }
 
 /* ======== END EXAMPLES ======== */
@@ -476,8 +477,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.2);
 
+  visibility: visible;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -488,6 +491,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
 
   min-height: 580px;
   min-width: 528px;
@@ -508,9 +512,9 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0;
+  padding: 6px;
 
-  background-color: #fff;
+  background-color: transparent;
 
   cursor: pointer;
 }
