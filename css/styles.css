@@ -723,9 +723,6 @@ input {
   line-height: 1.17;
   letter-spacing: 0.48px;
   color: var(--light-slate-color);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
 }
 
 .checkbox-wrapper {
@@ -754,7 +751,6 @@ input {
 }
 
 .agreement-conditions-link {
-  display: block;
   margin-left: 4px;
   color: var(--iris-color);
   text-decoration: underline;
