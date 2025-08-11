@@ -744,6 +744,7 @@ input {
 }
 
 .agreement-field:checked + .agreement-label span {
+  display: inline-flex;
   background-color: var(--ocean-color);
   border: none;
   fill: var(--cloud-color);
